@@ -1,0 +1,6 @@
+<div *ngIf="menuItems | async as menuItemsArray">
+  <div class="menu-item text-center" *ngFor="let menuItem of menuItemsArray">
+    <h3>{{ menuItem.name }}</h3>
+    <p style="color: orange; font-weight: bold">{{ menuItem.price }} L.L</p>
+  </div>
+</div>

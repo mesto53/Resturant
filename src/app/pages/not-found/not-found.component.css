@@ -1,0 +1,15 @@
+/* src/app/not-found/not-found.component.css */
+.not-found-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #e44d26;
+    /* Use a color that fits your design */
+}
+
+p {
+    color: #333;
+    /* Use a color that fits your design */
+}

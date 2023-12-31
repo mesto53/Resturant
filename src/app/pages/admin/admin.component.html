@@ -1,0 +1,86 @@
+<!-- admin.component.html -->
+<div class="text-center">
+  <h2>Menu Administration</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>
+          Action
+          <button class="btn btn-primary" (click)="add()">
+            <i class="fa fa-plus"></i>Add
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menuItem of menuItems | async as menuItemsArray">
+        <td>
+          <ng-container *ngIf="editingItemId != menuItem.id; else editMode">
+            {{ menuItem.name }}
+          </ng-container>
+          <ng-template #editMode>
+            <input [(ngModel)]="menuItem.name" />
+            <p class="text-danger" *ngIf="!menuItem.name"></p
+          ></ng-template>
+        </td>
+        <td>
+          <ng-container
+            *ngIf="editingItemId != menuItem.id; else editModePrice"
+          >
+            {{ menuItem.price }}
+          </ng-container>
+          <ng-template #editModePrice>
+            <input [(ngModel)]="menuItem.price" />
+            <p class="text-danger" *ngIf="!menuItem.price == null">
+              please enter value
+            </p>
+          </ng-template>
+        </td>
+        <td>
+          <button class="btn btn-secondary" (click)="editMenuItem(menuItem.id)">
+            <i class="fa fa-edit"></i>&nbsp;Edit
+          </button>
+          <button class="btn btn-danger" (click)="deleteMenuItem(menuItem.id)">
+            <i class="fa fa-trash"></i>&nbsp;Delete
+          </button>
+          <button class="btn btn-primary" (click)="savEdit(menuItem)">
+            <i class="fa fa-save"></i>&nbsp;Save
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="isnew">
+        <td>
+          <input
+            [(ngModel)]="newMenuItem.name"
+            placeholder="Enter name"
+            required
+          />
+          <p class="text-danger" *ngIf="!newMenuItem.name">
+            please enter value
+          </p>
+        </td>
+        <td>
+          <input
+            [(ngModel)]="newMenuItem.price"
+            placeholder="Enter price"
+            required
+          />
+          <p class="text-danger" *ngIf="!newMenuItem.price">
+            please enter value
+          </p>
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="saveAdd()">
+            <i class="fa fa-save"></i>&nbsp;Save
+          </button>
+          <button class="btn btn-secondary" (click)="cancel()">
+            <i class="fa fa-ban"></i>&nbsp;Cancel
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,31 @@
+/* src/app/about-restaurant/about-restaurant.component.css */
+.about-restaurant-container {
+    text-align: left;
+    margin-top: 50px;
+}
+
+h2,
+h3 {
+    color: orange;
+    /* Change to your desired color */
+}
+
+p {
+    color: #333;
+    /* Change to your desired color */
+}
+
+.restaurant-image-container {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 80vh;
+    /* Adjust the height as needed */
+}
+
+.small-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}

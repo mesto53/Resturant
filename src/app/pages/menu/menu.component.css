@@ -1,0 +1,40 @@
+/* menu.component.scss */
+.menu-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-item {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    color: #333;
+}
+
+.menu-item p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #e44d26;
+    /* Orange color, change as needed */
+}
+
+.orange{
+    color: orange;
+}
