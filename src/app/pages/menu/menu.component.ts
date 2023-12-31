@@ -10,7 +10,7 @@ import { DocumentData } from '@angular/fire/firestore';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css',
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent {
   public menuItems: Observable<Menu[]>;

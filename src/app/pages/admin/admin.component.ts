@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './admin.component.html',
-  styleUrl: './admin.component.css',
+  styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent {
   public menuItems: Observable<Menu[]>;

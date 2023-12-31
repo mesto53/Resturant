@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "resturant-5822c": {
+      "hosting": {
+        "resturant": [
+          "resturant-5822c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "resturant-5822c"
+  }
+}
